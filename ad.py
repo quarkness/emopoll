@@ -49,12 +49,10 @@ r = requests.post("http://www.ad.nl/ad/article/emoVotes.do", data=payload, heade
 # print r.headers
 
 tussenstand = simplejson.loads(r.content)
-print tussenstand
 
-for k,v in tussenstand.items()
-match = re.match('emo(.)percent', args.url)
-smaaknummer = match.group(1)
-
-
+print '\n\ntussenstand:\n'
+for k,v in smaakjes_reverse.items():
+	key = 'emo%spercent' % k
+	print '%s: %s' % (v, tussenstand[key])
 
 
